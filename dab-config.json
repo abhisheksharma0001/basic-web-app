@@ -29,5 +29,33 @@
       "mode": "production"
     }
   },
-  "entities": {}
+ "entities": {
+  "Products": {
+    "source": {
+      "object": "dbo.Products",  
+      "type": "table"
+    },
+    "graphql": {
+      "enabled": true,
+      "type": {
+        "singular": "Product",
+        "plural": "Products"
+      }
+    },
+    "rest": {
+      "enabled": true
+    },
+    "permissions": [
+      {
+        "role": "anonymous",
+        "actions": [
+          {
+            "action": "*"
+          }
+        ]
+      }
+    ]
+  }
+}
+
 }
