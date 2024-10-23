@@ -30,42 +30,16 @@
     }
   },
   "entities": {
-    "salesOrderDetails": {
+    "Products": {
       "source": {
-        "object": "<schema>.<table>",
+        "object": "dbo.Products",
         "type": "table"
       },
       "graphql": {
         "enabled": true,
         "type": {
-          "singular": "salesOrderDetails",
-          "plural": "salesOrderDetails"
-        }
-      },
-      "rest": {
-        "enabled": true
-      },
-      "permissions": [
-        {
-          "role": "anonymous",
-          "actions": [
-            {
-              "action": "*"
-            }
-          ]
-        }
-      ]
-    },
-    "staticwebapp": {
-      "source": {
-        "object": "Sales.salesOrderDetails",
-        "type": "table"
-      },
-      "graphql": {
-        "enabled": true,
-        "type": {
-          "singular": "staticwebapp",
-          "plural": "staticwebapps"
+          "singular": "Products",
+          "plural": "Products"
         }
       },
       "rest": {
