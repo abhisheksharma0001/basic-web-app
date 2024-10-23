@@ -2,7 +2,7 @@
   "$schema": "https://github.com/Azure/data-api-builder/releases/download/v1.2.11/dab.draft.schema.json",
   "data-source": {
     "database-type": "mssql",
-"connection-string":"Server=tcp:studyuser1.database.windows.net,1433;Initial Catalog=AdventureWorks;Persist Security Info=False;User ID=newuser123@SQLFabricStudy.onmicrosoft.com;Password=Abhishek#180902;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+    "connection-string": "Server=tcp:studyuser1.database.windows.net,1433;Initial Catalog=AdventureWorks;Persist Security Info=False;User ID=newuser123@SQLFabricStudy.onmicrosoft.com;Password=Abhishek#180902;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
     "options": {
       "set-session-context": false
     }
@@ -20,7 +20,7 @@
     },
     "host": {
       "cors": {
-        "origins": [],
+        "origins": ["https://lemon-ground-02e4a4e10.5.azurestaticapps.net"],
         "allow-credentials": false
       },
       "authentication": {
@@ -29,33 +29,32 @@
       "mode": "production"
     }
   },
- "entities": {
-  "Products": {
-    "source": {
-      "object": "dbo.Products",  
-      "type": "table"
-    },
-    "graphql": {
-      "enabled": true,
-      "type": {
-        "singular": "Product",
-        "plural": "Products"
-      }
-    },
-    "rest": {
-      "enabled": true
-    },
-    "permissions": [
-      {
-        "role": "anonymous",
-        "actions": [
-          {
-            "action": "*"
-          }
-        ]
-      }
-    ]
+  "entities": {
+    "Products": {
+      "source": {
+        "object": "dbo.Products",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "Product",
+          "plural": "Products"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ]
+    }
   }
-}
-
 }
